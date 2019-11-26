@@ -5,8 +5,20 @@ public class Book {
  protected String bookname;
  protected String bookID;
   protected String bookPrice;
+private String name;
 
-
+Book(String bookname,String bookID,String bookPrice){
+   this.bookname= bookname;
+   this.bookID=bookID;
+   this.bookPrice=bookPrice;
+   
+}
+  public void setname(String n){
+       this.name=n;
+    }
+  public String getname(){
+      return name;
+  }
   public String getbookname(){
       return bookname;
       
@@ -30,10 +42,9 @@ public class Book {
      public void setbookPrice(String bookPrice){
                this.bookPrice=bookPrice;
      }
-  
-      
+        
     public static void main(String[] args) {
-Book B=new Book();
+Book B=new Book("","","");
         B.setbookname("Java");
         B.setbookID("1");
         B.setbookPrice("25$");
